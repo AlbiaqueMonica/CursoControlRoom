@@ -46,7 +46,7 @@ Exports the table as PDF
     Html To Pdf    ${sales_result_html}    ${OUTPUT_DIR}${/}sales_results1.pdf
 
  Open PDF file
-     Open File  ${OUTPUT_DIR}${/}sales_results.pdf
+     Open File  ${OUTPUT_DIR}${/}sales_results1.pdf
      #Close Pdf    sales_results.pdf 
 
 Log out and close
