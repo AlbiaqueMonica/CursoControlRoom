@@ -43,7 +43,7 @@ Collect the results
 Exports the table as PDF
     Wait Until Element Is Visible    id:sales-results
     ${sales_result_html}=    Get Element Attribute    id:sales-results    outerHTML
-    Html To Pdf    ${sales_result_html}    ${OUTPUT_DIR}${/}sales_results.pdf
+    Html To Pdf    ${sales_result_html}    ${OUTPUT_DIR}${/}sales_results1.pdf
 
  Open PDF file
      Open File  ${OUTPUT_DIR}${/}sales_results.pdf
