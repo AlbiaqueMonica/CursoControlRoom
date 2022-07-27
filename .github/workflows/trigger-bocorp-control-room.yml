@@ -1,14 +1,11 @@
-name: Upload to Control Room
+name: Test action
 
-on:
-  push:
-    branches:
-      - master
+on: [push]
 
 jobs:
-  upload-to-control-room:
+  test-action:
     runs-on: ubuntu-latest
-    name: Upload to Control Room
+    name: Test action
     steps:
       - uses: actions/checkout@master
       - name: Use Node.js 12.x
@@ -16,7 +13,7 @@ jobs:
         with:
           node-version: 12.x
       - name: Upload Robot to Control Room
-        uses: robocorp/action-upload-robot@v1
+        uses: ./
         with:
           workspace-key: ${{ secrets.ROBOCORP_WORKSPACE_KEY }}
           workspace-id: ${{ secrets.ROBOCORP_WORKSPACE_ID }}
